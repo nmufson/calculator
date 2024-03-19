@@ -1,0 +1,13 @@
+
+body {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.input {
+    background-color: lightgray;
+}
+
+.operator {
+    background-color: orange;
+}

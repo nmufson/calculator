@@ -33,6 +33,7 @@ const buttonOperator = document.querySelectorAll('.operator')
 const buttonEquals = document.querySelector('#equals')
 const buttonClear = document.querySelector('#clear')
 const buttonDecimal = document.querySelector('#decimal')
+const buttonNegative = document.querySelector('#negative')
 
 buttonInput.forEach((button) => {
     button.addEventListener('click', () => {
@@ -104,6 +105,36 @@ buttonDecimal.addEventListener('click', () => {
     };
     
 })
+
+buttonNegative.addEventListener('click', () => { 
+    addNegative();
+    if (operator === undefined) {
+        firstNumber = parseFloat(display.textContent);
+    } 
+    if (operator) {
+        secondNumber = parseFloat(display.textContent);
+    }
+} )
+
+// buttonNegative.addEventListener('click', () => {
+//     if (display.textContent === '0') return;
+//     if (display.textContent[0] === '-') {
+//         display.textContent = display.textContent.slice(1);
+
+//     } else {
+//         display.textContent = '-' + display.textContent
+//     }
+// })
+
+function addNegative() {
+    if (display.textContent === '0') return;
+    if (display.textContent[0] === '-') {
+        display.textContent = display.textContent.slice(1);
+
+    } else {
+        display.textContent = '-' + display.textContent
+    }
+}
 
 
 
